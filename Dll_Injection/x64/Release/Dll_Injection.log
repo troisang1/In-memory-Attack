@@ -1,0 +1,12 @@
+﻿  Dll_Injection.cpp
+D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\Dll_Injection.cpp(34,9): warning C4101: 'processHandle': unreferenced local variable
+D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\Dll_Injection.cpp(33,8): warning C4101: 'remoteBuffer': unreferenced local variable
+D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\Dll_Injection.cpp(50,16): warning C4101: 'threadEntry': unreferenced local variable
+D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\Dll_Injection.cpp(125,26): warning C4244: 'argument': conversion from 'DWORD64' to 'DWORD', possible loss of data
+D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\Dll_Injection.cpp(190,48): warning C4312: 'type cast': conversion from '__unaligned DWORD' to 'LPCSTR' of greater size
+D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\Dll_Injection.cpp(248,27): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 87 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Dll_Injection.vcxproj -> D:\Tailieu\UIT\ATKTHT\Injection\Dll_Injection\x64\Release\Dll_Injection.exe

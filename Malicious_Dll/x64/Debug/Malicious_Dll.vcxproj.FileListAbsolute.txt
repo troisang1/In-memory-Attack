@@ -1,0 +1,2 @@
+D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\x64\Debug\Malicious_Dll.dll
+D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\x64\Debug\Malicious_Dll.pdb
