@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-f A:\DATA\Task\Week2_1\data\reverseshell64.txt -t 6</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-f D:\Tailieu\UIT\ATKTHT\Injection\Release\shellcode64 -t 5</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

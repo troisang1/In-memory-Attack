@@ -1,3 +1,0 @@
-﻿  Source.cpp
-D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\Source.cpp(21,15): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-  Malicious_Dll.vcxproj -> D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\x64\Debug\Malicious_Dll.dll

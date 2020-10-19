@@ -1,9 +1,0 @@
-﻿  Source.cpp
-D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\Source.cpp(21,15): warning C4244: '=': conversion from 'std::streamoff' to 'int', possible loss of data
-     Creating library D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\x64\Release\Malicious_Dll.lib and object D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\x64\Release\Malicious_Dll.exp
-  Generating code
-  0 of 280 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Malicious_Dll.vcxproj -> D:\Tailieu\UIT\ATKTHT\Injection\Malicious_Dll\x64\Release\Malicious_Dll.dll

